@@ -1,0 +1,7 @@
+<div [@blinkState]="showState">
+  <p-card>
+    <div *ngIf="!show">{{data.title}}</div>
+    <div *ngIf="show">{{data.content}}</div>
+  </p-card>
+</div>
+<p-button (onClick)="toggle()" label="Blink"></p-button>

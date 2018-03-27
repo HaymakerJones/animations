@@ -1,0 +1,24 @@
+<div [@cardState]="state" (@cardState.start)="logAnimation($event)" (@cardState.done)="logAnimation($event)">
+  <p-card title="Multistate Demo with Animation Callbacks">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+    with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p-card>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-3">
+    <p-button label="move" (onClick)="setState('move')"></p-button>
+  </div>
+  <div class="ui-g-3">
+    <p-button label="enlarge" (onClick)="setState('enlarge')"></p-button>
+  </div>
+  <div class="ui-g-3">
+    <p-button label="spin" (onClick)="setState('spin')"></p-button>
+  </div>
+  <div class="ui-g-3">
+    <p-button label="reset" (onClick)="setState('reset')"></p-button>
+  </div>
+</div>
